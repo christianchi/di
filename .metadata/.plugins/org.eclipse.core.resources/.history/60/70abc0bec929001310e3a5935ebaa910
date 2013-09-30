@@ -19,7 +19,7 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         
-        usuarioEditText = (EditText) findViewById(R.id.usuarioEditText);
+        usuario =
         
         btn = (Button) findViewById(R.id.buttonClick);
         btn.setOnClickListener(new View.OnClickListener() {
@@ -28,7 +28,6 @@ public class MainActivity extends Activity {
 			public void onClick(View arg0) {
 				Log.i("Evento","Se ha hecho clic en el Bot—n");
 				
-				String texto = usuarioEditText.getText().toString();
 			}
 		});
     }

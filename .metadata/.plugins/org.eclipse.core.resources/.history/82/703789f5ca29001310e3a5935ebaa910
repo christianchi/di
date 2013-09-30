@@ -28,7 +28,6 @@ public class MainActivity extends Activity {
 			public void onClick(View arg0) {
 				Log.i("Evento","Se ha hecho clic en el Bot—n");
 				
-				String texto = usuarioEditText.getText().toString();
 			}
 		});
     }
