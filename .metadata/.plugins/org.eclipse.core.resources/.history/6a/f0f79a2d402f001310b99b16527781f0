@@ -1,0 +1,40 @@
+package com.dam.di.spinnerinputcontrol;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.view.Menu;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
+
+public class MainActivity extends Activity {
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_main);
+		
+		// Tenemos 2 formas de generar el listado de opciones del Spinner
+		// 1. A PARTIR DE UN ARRAY DE STRINGS DECLARADO EN /res/values/strings.xml
+		
+		Spinner spinner = (Spinner) findViewById(R.id.spinner);
+		// Create an ArrayAdapter using the string array and a default spinner layout
+		ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,R.array.planetas, android.R.layout.simple_spinner_item);
+		// Specify the layout to use when the list of choices appears
+		adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+		// Apply the adapter to the spinner
+		spinner.setAdapter(adapter);
+		
+		// 2. A PARTIR DE UN ARRAY QUE SE DECLARE EN ESTA MISMA CLASE
+		
+		// 3. A PARTIR DE DATOS DE UNA BBDD.
+		// Aœn no veremos este caso...
+	}
+
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		// Inflate the menu; this adds items to the action bar if it is present.
+		getMenuInflater().inflate(R.menu.main, menu);
+		return true;
+	}
+
+}

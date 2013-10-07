@@ -1,0 +1,30 @@
+package com.dam.di.spinnerinputcontrol;
+
+import android.os.Bundle;
+import android.app.Activity;
+import android.view.Menu;
+
+public class MainActivity extends Activity {
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_main);
+		
+		// Tenemos 2 formas de generar el listado de opciones del Spinner
+		// 1. A PARTIR DE UN ARRAY DE STRINGS DECLARADO EN /res/values/strings.xml
+		
+		// 2. A PARTIR DE UN ARRAY QUE SE DECLARE EN ESTA MISMA CLASE
+		
+		// 3. A PARTIR DE DATOS DE UNA BBDD.
+		// Aœn no veremos este caso...
+	}
+
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		// Inflate the menu; this adds items to the action bar if it is present.
+		getMenuInflater().inflate(R.menu.main, menu);
+		return true;
+	}
+
+}
