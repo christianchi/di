@@ -1,0 +1,62 @@
+package com.dam.di.spinnercustom;
+
+import android.app.Activity;
+import android.content.Context;
+import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.ImageView;
+import android.widget.Spinner;
+import android.widget.TextView;
+
+public class MainActivity extends Activity {
+
+	String[] spinnerValues = { "Enfadado", "Gracioso" };
+ 
+    int total_images[] = { R.drawable.icon_emoticono_enfadado, R.drawable.icon_emoticono_gracioso};
+ 
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.main);
+ 
+        // Rescato el elemento Spinner del layout main.xml, mediante su id R.id.spinner_show
+        Spinner mySpinner = (Spinner) findViewById(R.id.spinner_show);
+        mySpinner.setAdapter(new MyAdapter(this, R.layout.custom_spinner,
+                spinnerValues));
+    }
+ 
+    public class MyAdapter extends ArrayAdapter<String> {
+ 
+        public MyAdapter(Context ctx, int txtViewResourceId, String[] objects) {
+            super(ctx, txtViewResourceId, objects);
+        }
+ 
+        @Override
+        public View getDropDownView(int position, View cnvtView, ViewGroup prnt) {
+            return getCustomView(position, cnvtView, prnt);
+        }
+        @Override
+        public View getView(int pos, View cnvtView, ViewGroup prnt) {
+            return getCustomView(pos, cnvtView, prnt);
+        }
+        public View getCustomView(int position, View convertView,
+                ViewGroup parent) {
+            LayoutInflater inflater = getLayoutInflater();
+            View mySpinner = inflater.inflate(R.layout.custom_spinner, parent,
+                    false);
+ 
+            TextView subSpinner = (TextView) mySpinner
+                    .findViewById(R.id.sub_text_seen);
+            subSpinner.setText(spinnerValues[position]);
+ 
+            ImageView left_icon = (ImageView) mySpinner
+                    .findViewById(R.id.left_pic);
+            left_icon.setImageResource(total_images[position]);
+ 
+            return mySpinner;
+        }
+    }
+}

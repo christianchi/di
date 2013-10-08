@@ -4,4 +4,7 @@
 <fullyQualifiedTypeName name="android.view.View.OnClickListener"/>
 <fullyQualifiedTypeName name="android.widget.Button"/>
 <fullyQualifiedTypeName name="android.widget.EditText"/>
+<fullyQualifiedTypeName name="com.dam.di.spinnerinputcontrol.R.layout"/>
+<fullyQualifiedTypeName name="com.dam.di.spinnerinputcontrol.R.id"/>
+<fullyQualifiedTypeName name="java.lang.CharSequence"/>
 </qualifiedTypeNameHistroy>
