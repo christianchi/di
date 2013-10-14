@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename Java project &apos;MenuContextualList&apos; to &apos;CustomListView&apos;&#x0A;- Original element: &apos;MenuContextualList&apos;&#x0A;- Renamed element: &apos;MenuContextualList&apos;&#x0A;- Update references to refactored element" description="Rename Java project &apos;MenuContextualList&apos;" flags="7" id="org.eclipse.jdt.ui.rename.java.project" input="=MenuContextualList" name="CustomListView" references="true" stamp="1381745916041" version="1.0"/>
+</session>

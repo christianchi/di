@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;com.example.menucontextuallist.MainActivity.AdaptadorItem&apos; to &apos;AdaptadorItemFruta&apos;&#x0A;- Original project: &apos;CustomListView&apos;&#x0A;- Original element: &apos;com.example.menucontextuallist.MainActivity.AdaptadorItem&apos;&#x0A;- Renamed element: &apos;com.example.menucontextuallist.MainActivity.AdaptadorItemFruta&apos;&#x0A;- Update references to refactored element&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;AdaptadorItem&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;com.example.menucontextuallist{MainActivity.java[MainActivity[AdaptadorItem" matchStrategy="1" name="AdaptadorItemFruta" qualified="false" references="true" similarDeclarations="false" stamp="1381748775259" textual="false" version="1.0"/>
+</session>

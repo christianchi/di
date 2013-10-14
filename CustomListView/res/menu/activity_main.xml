@@ -1,0 +1,15 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item 
+        android:id="@+id/cesta"
+        android:title="Añadir a la cesta"/>
+    
+    <item 
+        android:id="@+id/compra"
+        android:title="Añadir a la lista de la compra"/>
+    
+    <item 
+        android:id="@+id/compartir"
+        android:title="Compartir"/>
+
+</menu>
