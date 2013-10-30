@@ -7,4 +7,8 @@
 <fullyQualifiedTypeName name="com.dam.di.spinnerinputcontrol.R.layout"/>
 <fullyQualifiedTypeName name="com.dam.di.spinnerinputcontrol.R.id"/>
 <fullyQualifiedTypeName name="java.lang.CharSequence"/>
+<fullyQualifiedTypeName name="com.example.menucontextuallist.R.drawable"/>
+<fullyQualifiedTypeName name="com.example.menucontextuallist.R.menu"/>
+<fullyQualifiedTypeName name="android.R"/>
+<fullyQualifiedTypeName name="android.R.drawable"/>
 </qualifiedTypeNameHistroy>

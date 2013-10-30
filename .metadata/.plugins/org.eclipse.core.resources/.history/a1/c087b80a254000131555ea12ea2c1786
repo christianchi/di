@@ -1,0 +1,11 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="1"
+        android:showAsAction="never"
+        android:title="@string/action_settings" android:icon="@android:drawable/ic_menu_manage"/>
+    <item android:id="@+id/action_profile" android:title="@string/action_profile" android:orderInCategory="2" android:icon="@android:drawable/ic_menu_info_details"></item>
+    <item android:id="@+id/action_logout" android:title="@string/action_logout" android:orderInCategory="3" android:icon="@android:drawable/ic_menu_revert" android:showAsAction="ifRoom"></item>
+
+</menu>
