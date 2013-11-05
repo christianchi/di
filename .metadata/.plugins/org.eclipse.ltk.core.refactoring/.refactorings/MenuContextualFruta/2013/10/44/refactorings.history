@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;MenuContextualFruta/res/menu/user_context_menu.xml&apos; to &apos;fruta_context_menu.xml&apos;" description="Rename resource &apos;user_context_menu.xml&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="res/menu/user_context_menu.xml" name="fruta_context_menu.xml" stamp="1383225007159" updateReferences="true"/>
+</session>

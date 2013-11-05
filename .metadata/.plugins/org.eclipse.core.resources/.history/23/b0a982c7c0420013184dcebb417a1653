@@ -1,0 +1,5 @@
+package com.dam.di.contextualactionmode;
+
+public class Usuario {
+	private String nombre;
+}
