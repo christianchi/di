@@ -14,11 +14,8 @@ public class MainActivity extends Activity {
 		setContentView(R.layout.activity_main);
 		
 		LinearLayout linear = (LinearLayout) findViewById(R.id.linearLayout);
-		
 		EditText texto = new EditText(MainActivity.this);
 		texto.setText("Miguel");
-
-		
 		linear.addView(texto);
 	}
 
