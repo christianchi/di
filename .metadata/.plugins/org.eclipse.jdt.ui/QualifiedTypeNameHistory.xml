@@ -2,7 +2,6 @@
 <qualifiedTypeNameHistroy>
 <fullyQualifiedTypeName name="android.util.Log"/>
 <fullyQualifiedTypeName name="android.widget.Button"/>
-<fullyQualifiedTypeName name="android.widget.EditText"/>
 <fullyQualifiedTypeName name="com.dam.di.spinnerinputcontrol.R.layout"/>
 <fullyQualifiedTypeName name="com.dam.di.spinnerinputcontrol.R.id"/>
 <fullyQualifiedTypeName name="java.lang.CharSequence"/>
@@ -13,4 +12,17 @@
 <fullyQualifiedTypeName name="android.view.View.OnClickListener"/>
 <fullyQualifiedTypeName name="android.widget.CheckBox"/>
 <fullyQualifiedTypeName name="com.dam.di.contextualactionmode.R.menu"/>
+<fullyQualifiedTypeName name="com.dam.di.creacionedittextdinamica.MainActivity"/>
+<fullyQualifiedTypeName name="android.app.ListActivity"/>
+<fullyQualifiedTypeName name="android.widget.AbsListView"/>
+<fullyQualifiedTypeName name="com.dam.di.contextualactionmode.UsuarioArrayAdapter"/>
+<fullyQualifiedTypeName name="android.content.Context"/>
+<fullyQualifiedTypeName name="android.widget.LinearLayout"/>
+<fullyQualifiedTypeName name="android.widget.EditText"/>
+<fullyQualifiedTypeName name="android.util.AttributeSet"/>
+<fullyQualifiedTypeName name="com.dam.di.contextualactionmode.Usuario"/>
+<fullyQualifiedTypeName name="android.content.Intent"/>
+<fullyQualifiedTypeName name="com.dam.di.contextualactionmode.EdicionActivity"/>
+<fullyQualifiedTypeName name="com.dam.di.contextualactionmode.MainActivity"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
 </qualifiedTypeNameHistroy>

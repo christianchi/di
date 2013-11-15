@@ -20,10 +20,11 @@ import android.widget.Toast;
 
 public class MainActivity extends Activity {
 
-	ActionMode mActionMode;
+
 	AdaptadorUsuario adapter;
 	ListView lista;
 	ArrayList<Usuario> listaUsuario;
+	ActionMode mActionMode;
 	public int selectedItem = -1, contadorCheck = 0;
 
 	@Override

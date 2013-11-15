@@ -1,0 +1,43 @@
+package com.dam.di.contextualactionmode;
+
+public class Usuario implements Parcelable {
+	private String nombre;
+
+	public Usuario(String nombre) {
+		super();
+		this.nombre = nombre;
+	}
+	
+	private Usuario(Parcel in) {
+		mData = in.readInt();
+	}
+
+	public String getNombre() {
+		return nombre;
+	}
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+
+	public int describeContents() {
+		return 0;
+	}
+
+	public void writeToParcel(Parcel out, int flags) {
+		out.writeInt(mData);
+	}
+
+	public static final Parcelable.Creator<MyParcelable> CREATOR = new Parcelable.Creator<MyParcelable>() {
+		public MyParcelable createFromParcel(Parcel in) {
+			return new MyParcelable(in);
+		}
+
+		public MyParcelable[] newArray(int size) {
+			return new MyParcelable[size];
+		}
+	};
+
+
+
+}
