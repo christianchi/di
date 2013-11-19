@@ -1,0 +1,8 @@
+INDEX VERSION 1.126+/Users/miguelcampos/Documents/SALESIANOS/2013-2014/M—dulos/DI/workspace/06 Contextual Action Mode/.metadata/.plugins/org.eclipse.jdt.core
+1895195757.index
+4004135473.index
+1223700710.index
+3084628078.index
+4047162127.index
+1682936626.index
+1311962463.index
