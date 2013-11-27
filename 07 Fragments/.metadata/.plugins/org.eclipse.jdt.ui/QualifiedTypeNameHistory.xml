@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
 <fullyQualifiedTypeName name="android.app.ListFragment"/>
-<fullyQualifiedTypeName name="android.support.v4.app.ListFragment"/>
 <fullyQualifiedTypeName name="com.dam.di.listfragmentexample.ListadoProductosFragment"/>
 <fullyQualifiedTypeName name="com.dam.di.multiscreendetection.DetailFragment"/>
 <fullyQualifiedTypeName name="android.support.v4.app.Fragment"/>
 <fullyQualifiedTypeName name="com.dam.di.multiscreendetection.R.id"/>
+<fullyQualifiedTypeName name="com.dam.di.fragmentospasoapaso.R.id"/>
+<fullyQualifiedTypeName name="com.dam.di.fragmentospasoapaso.fragments.ListadoFragment"/>
+<fullyQualifiedTypeName name="android.support.v4.app.ListFragment"/>
 </qualifiedTypeNameHistroy>

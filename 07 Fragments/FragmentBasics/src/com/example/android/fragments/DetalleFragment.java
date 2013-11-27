@@ -62,6 +62,8 @@ public class DetalleFragment extends Fragment {
     public void updateDetalleUsuario(int position) {
         TextView article = (TextView) getActivity().findViewById(R.id.article);
         article.setText(UsuarioItem.DatosUsuarios[position]);
+        
+        //ImageView image = (ImageView) getActivity().findViewById(R.id.imagenUsuario)
         mCurrentPosition = position;
     }
 

@@ -33,7 +33,7 @@ public class ListadoFragment extends ListFragment {
     public interface OnListadoSelectedListener {
         /** Llamado por ListadoFragment cuando se selecciona un 
          * usuario de la lista de Usuarios */
-        public void onArticleSelected(int position);
+        public void onListItemSelected(int position);
     }
 
     @Override
@@ -75,7 +75,7 @@ public class ListadoFragment extends ListFragment {
             mCallback = (OnListadoSelectedListener) activity;
         } catch (ClassCastException e) {
             throw new ClassCastException(activity.toString()
-                    + " must implement OnHeadlineSelectedListener");
+                    + " MainActiviy debe implementar ");
         }
     }
 
@@ -83,7 +83,7 @@ public class ListadoFragment extends ListFragment {
     public void onListItemClick(ListView l, View v, int position, long id) {
         // Cuando hagamos clic en un elemento de la lista, invocamos al método
     	// onArticleSelected implementado en el MainActivity.
-        mCallback.onArticleSelected(position);
+        mCallback.onListItemSelected(position);
         
         // Indicamos al ListView que el elemento que ocupa la posición "position"
         // ha sido seleccionado.

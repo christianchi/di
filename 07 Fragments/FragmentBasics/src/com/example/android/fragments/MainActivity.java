@@ -49,20 +49,20 @@ public class MainActivity extends FragmentActivity
         }
     }
     
-    public void onArticleSelected(int position) {
+    public void onListItemSelected(int position) {
         // The user selected the headline of an article from the HeadlinesFragment
 
         // Capture the article fragment from the activity layout
-        DetalleFragment articleFrag = (DetalleFragment)
+        DetalleFragment detalleFrag = (DetalleFragment)
                 getSupportFragmentManager().findFragmentById(R.id.detalle_fragment);
 
-        if (articleFrag != null) {
-            // If article frag is available, we're in two-pane layout...
+        if (detalleFrag != null) {
+            // ME encuentro en una Tablet
+        	// Invoco al método updateDetalleUsuario, del Fragment
+        	// DetalleFragment
+            detalleFrag.updateDetalleUsuario(position);
 
-            // Call a method in the ArticleFragment to update its content
-            articleFrag.updateDetalleUsuario(position);
-
-        } else {
+        } else { // estoy en un móvil
             // If the frag is not available, we're in the one-pane layout and must swap frags...
 
             // Create fragment and give it an argument for the selected article
