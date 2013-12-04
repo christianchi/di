@@ -20,6 +20,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class DetalleFragment extends Fragment {
@@ -60,8 +61,11 @@ public class DetalleFragment extends Fragment {
     }
 
     public void updateDetalleUsuario(int position) {
-        TextView article = (TextView) getActivity().findViewById(R.id.article);
+        TextView article = (TextView) getActivity().findViewById(R.id.nombreUsuario);
         article.setText(UsuarioItem.DatosUsuarios[position]);
+        
+        ImageView imagen = (ImageView) getActivity().findViewById(R.id.imagenUsuario);
+        imagen.setImageResource(UsuarioItem.ImagenesUsuarios[position]);
         
         //ImageView image = (ImageView) getActivity().findViewById(R.id.imagenUsuario)
         mCurrentPosition = position;

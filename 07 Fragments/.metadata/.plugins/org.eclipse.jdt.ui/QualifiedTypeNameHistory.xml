@@ -8,4 +8,8 @@
 <fullyQualifiedTypeName name="com.dam.di.fragmentospasoapaso.R.id"/>
 <fullyQualifiedTypeName name="com.dam.di.fragmentospasoapaso.fragments.ListadoFragment"/>
 <fullyQualifiedTypeName name="android.support.v4.app.ListFragment"/>
+<fullyQualifiedTypeName name="com.example.android.fragments.R.drawable"/>
+<fullyQualifiedTypeName name="com.example.android.fragments.R"/>
+<fullyQualifiedTypeName name="android.widget.ImageView"/>
+<fullyQualifiedTypeName name="com.example.android.fragments.R.id"/>
 </qualifiedTypeNameHistroy>
