@@ -7,6 +7,7 @@ import android.view.MenuItem;
 import android.support.v4.app.NavUtils;
 import android.annotation.TargetApi;
 import android.os.Build;
+import com.dam.di.R;
 
 public class ChildActivity extends Activity {
 
