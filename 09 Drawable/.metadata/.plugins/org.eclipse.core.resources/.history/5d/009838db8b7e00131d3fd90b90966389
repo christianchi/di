@@ -1,0 +1,48 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#bbb"
+    android:orientation="vertical"
+    android:padding="50dp" >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_login_white"
+        android:orientation="vertical"
+        android:padding="30dp" >
+
+        <EditText
+            android:id="@+id/editText1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#c09"
+            android:ems="10"
+            android:padding="10dp"
+            android:textColor="#fff" >
+
+            <requestFocus />
+        </EditText>
+
+        <EditText
+            android:id="@+id/editText2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="#c09"
+            android:ems="10"
+            android:inputType="textPassword"
+            android:padding="10dp"
+            android:textColor="#fff" />
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="#00b"
+            android:text="Entrar"
+            android:textColor="#fff" />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,6 @@
+INDEX VERSION 1.126+/Users/miguelcampos/Documents/SALESIANOS/2013-2014/M—dulos/DI/workspace/09 Drawable/.metadata/.plugins/org.eclipse.jdt.core
+847643456.index
+2025048549.index
+3344451246.index
+3516979678.index
+2470538943.index
