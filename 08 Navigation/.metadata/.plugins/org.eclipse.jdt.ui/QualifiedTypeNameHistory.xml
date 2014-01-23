@@ -4,4 +4,7 @@
 <fullyQualifiedTypeName name="com.dam.di.botonupapp.ChildActivity"/>
 <fullyQualifiedTypeName name="com.dam.di.tabsnavigation.fragments.SociosFragment"/>
 <fullyQualifiedTypeName name="com.dam.di.tabsnavigation.R.id"/>
+<fullyQualifiedTypeName name="com.example.android.navigationdrawerexample.R.id"/>
+<fullyQualifiedTypeName name="android.widget.LinearLayout"/>
+<fullyQualifiedTypeName name="android.widget.GridView"/>
 </qualifiedTypeNameHistroy>
