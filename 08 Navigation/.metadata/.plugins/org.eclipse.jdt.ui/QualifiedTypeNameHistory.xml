@@ -7,4 +7,8 @@
 <fullyQualifiedTypeName name="com.example.android.navigationdrawerexample.R.id"/>
 <fullyQualifiedTypeName name="android.widget.LinearLayout"/>
 <fullyQualifiedTypeName name="android.widget.GridView"/>
+<fullyQualifiedTypeName name="com.example.tabsapp.FirstFragment"/>
+<fullyQualifiedTypeName name="com.example.tabsapp.SecondFragment"/>
+<fullyQualifiedTypeName name="com.example.android.navigationdrawerexample.FirstFragment"/>
+<fullyQualifiedTypeName name="android.app.Fragment"/>
 </qualifiedTypeNameHistroy>
