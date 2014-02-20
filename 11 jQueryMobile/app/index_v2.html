@@ -1,0 +1,120 @@
+				<!DOCTYPE html> 
+				<html>
+				<head>
+
+					<title>Page Title</title>
+					<meta charset="utf-8" />
+					<meta name="viewport" content="width=device-width, initial-scale=1">
+					<link rel="stylesheet" href="../assets/jquery.mobile-1.4.0.min.css" />
+					<link rel="stylesheet" href="../assets/themes/teklas-theme.min.css" />
+					<link rel="stylesheet" href="../assets/themes/jquery.mobile.icons.min.css" />
+					<script src="../assets/jquery-2.1.0.min.js"></script>
+					<script src="../assets/jquery.mobile-1.4.0.min.js"></script>
+					<script type="text/javascript">
+					(function( $ ) {
+						  // On document ready
+						  $(function() {
+								
+							$( "#login" ).click(function( event ) {
+								// Para eliminar el comportamiento por defecto del botón
+								event.preventDefault();
+
+								//$.mobile.navigate( "#pagetwo" );
+								var condicion = $("#email").val()=="admin@email.com" && $("#password").val()=="1234";
+								if(condicion) {
+									location.hash="#pagetwo";
+								} else {
+									$("#linkPopup").click();
+								}
+							});
+
+						});
+					})( jQuery );
+					</script>
+					
+					<style>
+						.ui-grid-solo img {
+							width  : 80%;
+							height : auto;
+						}
+						.ui-grid-solo {
+							text-align: center;
+						}
+						#popupBasic {
+							margin: 0 auto;
+							margin-top: 50%;
+						}
+						#pageone {
+							text-align: center;
+						}	
+					</style>
+				</head>
+
+				<body>
+					<section id="pageone" data-role="page" data-theme="a">
+
+						<article data-role="content">
+							<div class="ui-grid-solo">
+								<div class="ui-block-a"><img src="../assets/images/logo.png" /></div>
+							</div>
+							
+							<label for="text-basic">Email:</label>
+							<input name="text-basic" id="email" value="" type="email">
+							<label for="password">Contraseña:</label>
+							<input name="password" id="password" value="" autocomplete="off" type="password">
+							<div class="ui-field-contain">
+								<fieldset data-role="controlgroup">
+									<label for="checkbox-1">Recordarme</label>
+									<input name="checkbox-1" id="checkbox-1" type="checkbox">
+								</fieldset>
+							</div>
+							<a href="#" class="ui-shadow ui-btn ui-corner-all ui-btn-inline ui-btn-icon-right ui-icon-carat-r" id="login" data-theme="a">Entrar</a>
+
+<a href="#popupBasic" id="linkPopup" data-rel="popup"  class="ui-btn ui-corner-all ui-shadow ui-btn-inline" data-transition="pop" style="display:none;">Basic Popup</a>
+							<div data-role="popup" data-overlay-theme="a" id="popupBasic">
+							<p>Revise los datos de acceso.</p>
+							</div>
+						</article><!-- /content -->
+						<footer data-role="footer">
+							<h1>&copy; 2014 Teklas.es </h1>
+						</footer><!-- /footer -->
+					</section><!-- /page -->
+
+					<section id="pagetwo" data-role="page" data-theme="a">
+						<header data-role="header">
+							<h1>Inicio</h1>
+							<div data-role="navbar" data-iconpos="bottom" data-theme="b">
+								<ul>
+									<li><a href="#" data-icon="grid">Mis clases</a></li>
+									<li><a href="#" data-icon="user" class="ui-btn-active">Usuarios</a></li>
+									<li><a href="#" data-icon="gear">Perfil</a></li>
+								</ul>
+							</div><!-- /navbar -->
+						</header><!-- /header -->
+						<article data-role="content">
+							<ul data-role="listview" data-inset="true">
+								<li><a href="#">Miguel</a></li>
+								<li><a href="#">Olivia</a></li>
+								<li><a href="#">María</a></li>
+								<li><a href="#">Juan</a></li>
+								<li><a href="#">Rebeca</a></li>
+							</ul>
+						</article><!-- /content -->
+						<footer data-role="footer">
+							<h1>&copy; 2014 Teklas.es</h1>
+						</footer><!-- /footer -->
+					</section><!-- /page -->
+
+					<section id="pagethree" data-role="page">
+						<header data-role="header">
+							<h1>Página 3</h1>
+						</header><!-- /header -->
+						<article data-role="content">
+							<p><a href="#pageone" data-transition="flow">Ir a Página 1</a></p>
+							<p><a href="#pagetwo" data-transition="flow">Ir a Página 2</a></p>
+						</article><!-- /content -->
+						<footer data-role="footer">
+							<h1>Footer</h1>
+						</footer><!-- /footer -->
+					</section><!-- /page -->
+				</body>

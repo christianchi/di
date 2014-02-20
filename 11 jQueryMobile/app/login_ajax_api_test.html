@@ -1,0 +1,48 @@
+				<!DOCTYPE html> 
+				<html>
+				<head>
+
+					<title>Page Title</title>
+					<meta charset="utf-8" />
+					<meta name="viewport" content="width=device-width, initial-scale=1">
+					<link rel="stylesheet" href="../assets/jquery.mobile-1.4.0.min.css" />
+					<link rel="stylesheet" href="../assets/themes/teklas-theme.min.css" />
+					<link rel="stylesheet" href="../assets/themes/jquery.mobile.icons.min.css" />
+					<script src="../assets/jquery-2.1.0.min.js"></script>
+					<script src="../assets/jquery.mobile-1.4.0.min.js"></script>
+					<script type="text/javascript">
+
+						$(function() {
+							$.ajax({
+								type: 'GET',
+								url: "http://api.miguelcr.com/auth/clientlogin",
+								contentType: "application/json",
+								dataType: 'jsonp',
+								jsonp : "callback",
+								jsonpCallback: 'jsonpCallback',
+                                data: { email: "miguelcampos84@hotmail.com", pwd: "1234" },
+								success: function(datos) {
+									var apiKey= datos.key;
+								},
+								error: function (xhr, ajaxOptions, thrownError) {
+									alert("Error: " + xhr.status + "\n" +
+										"Message: " + xhr.statusText + "\n" +
+										"Response: " + xhr.responseText + "\n" + thrownError);
+								}
+							});
+
+                            function jsonpCallback(data) {
+                            // do something with the response
+                            //alert(data.mensaje);
+                            }
+						});
+						
+        </script>
+
+    </head>
+
+    <body>
+
+
+    </body>
+    </html>
