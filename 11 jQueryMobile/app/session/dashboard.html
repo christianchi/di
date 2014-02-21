@@ -1,0 +1,55 @@
+<!DOCTYPE html> 
+<html>
+<head>
+
+ <title>Page Title</title>
+ <meta charset="utf-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <link rel="stylesheet" href="../../assets/jquery.mobile-1.4.0.min.css" />
+ <link rel="stylesheet" href="../../assets/themes/teklas-theme.min.css" />
+ <link rel="stylesheet" href="../../assets/themes/jquery.mobile.icons.min.css" />
+ <script src="../../assets/json2.js"></script>
+ <script src="../../assets/jquery-2.1.0.min.js"></script>
+ <script src="../../assets/jstorage.js"></script>
+ <script src="../../assets/jquery.mobile-1.4.0.min.js"></script>
+ <script type="text/javascript">
+
+  $(function() {
+
+    // consulto si la apikey existe
+    var apikey = $.jStorage.get("apikey");
+
+    // si no existe debo mandar el usuario a la pantalla de login
+    if(apikey==null){
+      $.mobile.changePage("ajax_login.html");
+    } else {
+      // Si el usuario ha hecho login, tomo la variable nombre
+      // y la asigno al encabezado.
+      $("#username").html($.jStorage.get("nombre"));
+    }
+  });
+ </script>
+
+</head>
+
+<body>
+
+<section id="page-dashboard" data-role="page" data-theme="a">
+  <header data-role="header" data-theme="b">
+   <h1>Dashboard</h1>
+   <a href="#" id="username" class="ui-btn-left ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-left ui-icon-user">Usuario</a>
+   <a href="#" class="ui-btn-right ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-right ui-icon-power">Salir</a>
+ </header><!-- /header -->
+ <article data-role="content">
+   <ul data-role="listview" data-inset="true">
+    <li><a href="#">Usuarios</a></li>
+    <li><a href="#">Equipos</a></li>
+  </ul>
+</article><!-- /content -->
+<footer data-role="footer" class="fixed">
+ <h1>&copy; 2014 miguelcr.com</h1>
+</footer><!-- /footer -->
+</section><!-- /page -->
+
+</body>
+</html>

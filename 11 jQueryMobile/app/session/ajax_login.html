@@ -5,11 +5,14 @@
    <title>Page Title</title>
    <meta charset="utf-8" />
    <meta name="viewport" content="width=device-width, initial-scale=1">
-   <link rel="stylesheet" href="../assets/jquery.mobile-1.4.0.min.css" />
-   <link rel="stylesheet" href="../assets/themes/teklas-theme.min.css" />
-   <link rel="stylesheet" href="../assets/themes/jquery.mobile.icons.min.css" />
-   <script src="../assets/jquery-2.1.0.min.js"></script>
-   <script src="../assets/jquery.mobile-1.4.0.min.js"></script>
+   <link rel="stylesheet" href="../../assets/jquery.mobile-1.4.0.min.css" />
+   <link rel="stylesheet" href="../../assets/themes/teklas-theme.min.css" />
+   <link rel="stylesheet" href="../../assets/themes/jquery.mobile.icons.min.css" />
+   <script src="../../assets/json2.js"></script>
+
+   <script src="../../assets/jquery-2.1.0.min.js"></script>
+   <script src="../../assets/jstorage.js"></script>
+   <script src="../../assets/jquery.mobile-1.4.0.min.js"></script>
    <script type="text/javascript">
 
        $(function() {
@@ -25,9 +28,9 @@
                 jsonpCallback: 'jsonpCallback',
                 data: { email: $("#email").val(), pwd: $("#password").val() },
                 success: function(datos) {
-                    var key ="OK tu api KEY es: "+datos.key;
-                    $("#userlogged").html(datos.firstname);
-                    location.hash="#page-dashboard";
+                    $.jStorage.set("apikey",datos.key);
+                    $.jStorage.set("nombre",datos.firstname);
+                    $.mobile.changePage("dashboard.html",{ transition: 'slideup'});
                 },
                 error: function (xhr, ajaxOptions, thrownError) {
                     alert("Error: " + xhr.status + "\n" +
@@ -41,6 +44,14 @@
          // do something with the response
          //alert(data.mensaje);
         }
+
+        // Este método es invocado cuando se termina de cargar el 
+        // documento dashboard.html, en el que se encuentra la página
+        // con id="page-dashboard"
+        $(document).delegate('#page-dashboard', 'pageshow', function () {
+            alert("entra");
+            $("#username").html($.jStorage.get("nombre"));
+        });
     });
 </script>
 
@@ -67,7 +78,7 @@
 
   <article data-role="content">
    <div class="ui-grid-solo">
-    <div class="ui-block-a"><img src="../assets/images/logo.png" /></div>
+    <div class="ui-block-a"><img src="../../assets/images/logo.png" /></div>
 </div>
 
 <label for="text-basic">Email:</label>
@@ -89,23 +100,6 @@
 </article><!-- /content -->
 <footer data-role="footer">
    <h1>&copy; 2014 </h1>
-</footer><!-- /footer -->
-</section><!-- /page -->
-
-<section id="page-dashboard" data-role="page" data-theme="a">
-  <header data-role="header" data-theme="b">
-   <h1>Dashboard</h1>
-   <a href="#" id="userlogged" class="ui-btn-left ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-left ui-icon-user">Usuario</a>
-   <a href="#" class="ui-btn-right ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-right ui-icon-power">Salir</a>
-</header><!-- /header -->
-<article data-role="content">
-   <ul data-role="listview" data-inset="true">
-    <li><a href="#">Usuarios</a></li>
-    <li><a href="#">Equipos</a></li>
-</ul>
-</article><!-- /content -->
-<footer data-role="footer" class="fixed">
-   <h1>&copy; 2014 miguelcr.com</h1>
 </footer><!-- /footer -->
 </section><!-- /page -->
 
