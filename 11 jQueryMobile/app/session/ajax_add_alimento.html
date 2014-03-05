@@ -17,20 +17,27 @@
 
        $(function() {
 
-        $( "#login" ).click(function( event ) {
+        $( "#add-alimento" ).click(function( event ) {
 
             $.ajax({
-                type: 'GET',
-                url: "http://api.miguelcr.com/auth/clientlogin",
+                type: 'POST',
+                url: "http://localhost/myapp/index.php/alimentos/add",
                 contentType: "application/json",
                 dataType: 'jsonp',
                 jsonp : "callback",
                 jsonpCallback: 'jsonpCallback',
-                data: { email: $("#email").val(), pwd: $("#password").val() },
+                // nombre y precio serán de las variables POST
+                // que tengo rescatar en mi controlador de CI.
+                // En Restclient lo indicábamos así en el body
+                // de la petición: nombre=Fresas&precio=4
+                data: { nombre: $("#nombre").val(), precio: $("#precio").val(), id: $("#select-alimentos").val() },
                 success: function(datos) {
-                    $.jStorage.set("apikey",datos.key);
-                    $.jStorage.set("nombre",datos.firstname);
-                    $.mobile.changePage("dashboard.html",{ transition: 'slideup'});
+                  var msg = "";
+                  for (key in datos) {
+                    $("lista-alimentos").html($("lista-alimentos")+
+                      "<li id='"+ datos[key].id+"'>"+datos[key]+"</li>");
+                  }
+
                 },
                 error: function (xhr, ajaxOptions, thrownError) {
                     alert("Error: " + xhr.status + "\n" +
@@ -81,17 +88,12 @@
     <div class="ui-block-a"><img src="../../assets/images/logo.png" /></div>
 </div>
 
-<label for="text-basic">Email:</label>
-<input name="text-basic" id="email" value="" type="email">
-<label for="password">Contraseña:</label>
-<input name="password" id="password" value="" autocomplete="off" type="password">
-<div class="ui-field-contain">
-    <fieldset data-role="controlgroup">
-     <label for="checkbox-1">Recordarme</label>
-     <input name="checkbox-1" id="checkbox-1" type="checkbox">
- </fieldset>
-</div>
-<a href="#" class="ui-shadow ui-btn ui-corner-all ui-btn-inline ui-btn-icon-right ui-icon-carat-r" id="login" data-theme="a">Entrar</a>
+<label for="text-basic">Nombre alimento:</label>
+<input name="text-basic" id="nombre" value="" type="text">
+<label for="precio">Precio:</label>
+<input name="precio" id="precio" value="" autocomplete="off" type="number">
+
+<a href="#" class="ui-shadow ui-btn ui-corner-all ui-btn-inline ui-btn-icon-right ui-icon-carat-r" id="add-alimento" data-theme="a">Guardar</a>
 
 <a href="#popupBasic" id="linkPopup" data-rel="popup"  class="ui-btn ui-corner-all ui-shadow ui-btn-inline" data-transition="pop" style="display:none;">Basic Popup</a>
 <div data-role="popup" data-overlay-theme="a" id="popupBasic">

@@ -16,6 +16,23 @@
 
   $(function() {
 
+    $.ajax({
+        type: 'GET',
+                url: "http://api.miguelcr.com/auth/mcr/index",
+                contentType: "application/json",
+                dataType: 'jsonp',
+                jsonp : "callback",
+                jsonpCallback: 'jsonpCallback',
+                success: function(datos) {
+                    alert(datos);
+                },
+                error: function (xhr, ajaxOptions, thrownError) {
+                    alert("Error: " + xhr.status + "\n" +
+                        "Message: " + xhr.statusText + "\n" +
+                        "Response: " + xhr.responseText + "\n" + thrownError);
+                }
+            }); // fin $.ajax
+
     // consulto si la apikey existe
     var apikey = $.jStorage.get("apikey");
 
